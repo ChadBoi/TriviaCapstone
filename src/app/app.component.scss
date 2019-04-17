@@ -1,9 +1,5 @@
-.fillSpace {
-  flex: 1 1 auto;
-}
-
 .customToolbar{
-  height: fit-content;
+  height: 60px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -11,10 +7,14 @@
   font-size: 100%;
   background-color: #333333;
 
+  .fillSpace {
+    flex: 1 1 auto;
+  }
+
   .toolbarLink, .toolbarName{
     color: #ffffff;
     padding: 1%;
-    margin: 2%;
+    margin: 1%;
     outline: 0;
     font-size: 110%;
     text-align: center;

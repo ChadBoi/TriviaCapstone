@@ -4,17 +4,11 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/triviaGame-master",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }

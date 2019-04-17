@@ -22,4 +22,11 @@ export class LoginPageComponent implements OnInit {
     this.router.navigate(['game-setup']);
   }
 
+
+  //remove when done with project
+  skip(){
+    this.authService.saveUserData("Skipped Login");
+    this.router.navigate(['game-setup']);
+  }
+
 }

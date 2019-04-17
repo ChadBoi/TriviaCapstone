@@ -11,7 +11,7 @@ export class AppComponent implements OnInit{
   welcomeMessage = "Please Login";
   loggedIn = false;
 
-  constructor(private authService: AuthService){};
+  constructor(public authService: AuthService){};
 
   ngOnInit(){
     if(this.authService.welcomeMessage != "Please Login"){

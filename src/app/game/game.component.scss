@@ -7,20 +7,32 @@
   overflow: hidden;
   background: #34ADFF -webkit-linear-gradient(45deg, #6c39b5 30%, #38f2ff 80%);
 
-  mat-card{
+  //mat-card{
+  //  //width: 80%;
+  //  height: fit-content;
+  //  padding: 2%;
+  //}
+
+  .questions{
     width: 80%;
-    height: fit-content;
-    padding: 2%;
-  }
 
-  .question {
-    margin: 10px;
-    padding: 10px;
-  }
-
-  .answers{
-    .answer{
-      margin: 5px;
+    .question {
+      margin: 10px;
+      width: 100%;
+      padding: 10px;
+    }
+    .answers{
+      .answer{
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+      }
+      .answer:hover{
+        cursor: pointer;
+      }
     }
   }
+
+
 }
+

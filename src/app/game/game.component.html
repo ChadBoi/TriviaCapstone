@@ -1,17 +1,17 @@
 <div class="page-container">
-  <mat-card *ngIf="gameOver === false" class="questions">
-    <p *ngIf="numPlayers > 1">Player {{currentPlayer + 1}}'s turn</p>
-    <div class="question">{{questions[currentQuestion]}}</div>
+  <div *ngIf="gameOver === false" class="questions">
+    <mat-card *ngIf="numPlayers > 1">Player {{currentPlayer + 1}}'s turn</mat-card>
+    <mat-card class="question">{{questions[currentQuestion]}}</mat-card>
     <div class="answers">
-      <div *ngFor="let answer of currentAnswers" class="answer">
-        <button mat-button class="answerButton" (click)="nextQuestion(currentQuestion, answer)">{{answer.question}}</button>
-      </div>
+      <mat-card *ngFor="let answer of currentAnswers" (click)="nextQuestion(currentQuestion, answer)" class="answer">
+        {{answer.question}}
+      </mat-card>
     </div>
-  </mat-card>
+  </div>
 
   <mat-card *ngIf="gameOver === true" class="results">
     <h3>Results</h3>
-    <p *ngFor="let player of playerScores; let i = index;">Player {{i + 1}} got {{playerScores[i]}} questions right
+    <p *ngFor="let player of playerScores; let i = index;">Player {{i + 1}} got {{playerScores[i]}} right
       out of
       {{dataService.data[1].numOfQuestions}}.</p>
   </mat-card>
